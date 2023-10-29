@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-10-29T18:58:08Z" name="Suite" finished-at="2023-10-29T18:58:28Z" duration-ms="19256">
+    <groups>
+    </groups>
+    <test started-at="2023-10-29T18:58:08Z" name="Test" finished-at="2023-10-29T18:58:28Z" duration-ms="19256">
+      <class name="com.qa.testscripts.TC_Login">
+        <test-method is-config="true" signature="BaseConfig(java.lang.String)[pri:0, instance:com.qa.testscripts.TC_Login@59af0466]" started-at="2023-10-30T00:28:09Z" name="BaseConfig" finished-at="2023-10-30T00:28:21Z" duration-ms="12327" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[mydevice]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BaseConfig -->
+        <test-method signature="login()[pri:0, instance:com.qa.testscripts.TC_Login@59af0466]" started-at="2023-10-30T00:28:21Z" name="login" finished-at="2023-10-30T00:28:27Z" duration-ms="6308" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.qa.testscripts.TC_Login@59af0466]" started-at="2023-10-30T00:28:27Z" name="teardown" finished-at="2023-10-30T00:28:28Z" duration-ms="602" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- com.qa.testscripts.TC_Login -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
