@@ -10,9 +10,11 @@ import io.appium.java_client.AppiumBy;
 public class TC_Homepage extends Testbase {
 	// Method to scroll to an element
 	@Test
-	public void scroll(String element) throws IOException {
+	public void scroll() throws IOException {
 		 driver.findElement(AppiumBy.androidUIAutomator("new UiScrollable(new UiSelector().scrollable(true).instance(0)).scrollIntoView(new UiSelector().textContains(\"Electronics\").instance(0))")).click();
-	captureScreenShot();
+	
+		 test = extent.createTest("TC_Homepage");
+		 
 	}
 
 }

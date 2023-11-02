@@ -1,15 +1,17 @@
 package com.qa.testscripts;
 
+import java.io.IOException;
 import java.util.List;
 
 import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import io.appium.java_client.AppiumBy;
 
 public class TC_MenuItems extends Testbase{
 	@Test
-	void getMenuitems()
+	void getMenuitems() throws IOException
 	{
 	menubtn.click();
 	List<WebElement> menuitems = ecommercepageObjects.getMenuItems();
@@ -19,5 +21,8 @@ public class TC_MenuItems extends Testbase{
 		System.out.println(item.getText());
 	}
 	
+	test = extent.createTest("TC_MenuItems");
 }
+	
 }
+	

@@ -11,8 +11,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.text.SimpleDateFormat;
-import java.util.Date;
+
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
@@ -35,7 +34,11 @@ public class Testbase {
 	String password;
 	Properties props;
 	
-	
+	//Intialize Extent reports
+	public WebDriver driver;
+	 public ExtentHtmlReporter htmlReporter;
+	 public ExtentReports extent;
+	 public ExtentTest test;
 
 	@SuppressWarnings("deprecation")
 	@Parameters({ "devicename" })
@@ -64,29 +67,54 @@ public class Testbase {
 
 		driver.findElement(AppiumBy.id("com.studiobluelime.ecommerceapp:id/btn_skip")).click();
 		Thread.sleep(3000);
+		
+		 public void setExtent() {
+			  // specify location of the report
+			  htmlReporter = new ExtentHtmlReporter(System.getProperty("user.dir") + "/myReport.html");
 
+			  htmlReporter.config().setDocumentTitle("Automation Report"); // Tile of report
+			  htmlReporter.config().setReportName("Mobile Testing"); // Name of the report
+			  htmlReporter.config().setTheme(Theme.DARK);
+			  
+			  extent = new ExtentReports();
+			  extent.attachReporter(htmlReporter);
+			  
+			  // Passing General information
+			  extent.setSystemInfo("Host name", "localhost");
+			  extent.setSystemInfo("Environemnt", "QA");
+			  extent.setSystemInfo("user", "Vamshi");
+			 }
+		
 	}
 
-	public void startRecording() {
 
-		((CanRecordScreen) driver).startRecordingScreen();
-	}
 
-	public void captureScreenShot() throws IOException {
+	public void captureScreenShot(String name) throws IOException {
 		String path = "C:\\Users\\chena\\eclipse-workspace\\SDET_CAPSTONE_MOBILEAUTOMATION\\Reports\\Screenshot";
 		File f = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 
-		SimpleDateFormat df = new SimpleDateFormat("dd-MMM-yyyy__hh_mm_ssaa");
+		
 
-		String file_name = df.format(new Date()) + ".png";
-
-		FileUtils.copyFile(f, new File(path + "/" + file_name));
+		FileUtils.copyFile(f, new File(path + "/" +name+".png"));
 	}
-
+	 @AfterMethod
+	 public void tearDown(ITestResult result) throws IOException {
+	  if (result.getStatus() == ITestResult.FAILURE) {
+	   test.log(Status.FAIL, "TEST CASE FAILED IS " + result.getName()); // to add name in extent report
+	   test.log(Status.FAIL, "TEST CASE FAILED IS " + result.getThrowable()); // to add error/exception in extent report
+	   String screenshotPath = NopCommerceTest.getScreenshot(driver, result.getName());
+	   test.addScreenCaptureFromPath(screenshotPath);// adding screen shot
+	  } else if (result.getStatus() == ITestResult.SKIP) {
+	   test.log(Status.SKIP, "Test Case SKIPPED IS " + result.getName());
+	  }
+	  else if (result.getStatus() == ITestResult.SUCCESS) {
+	   test.log(Status.PASS, "Test Case PASSED IS " + result.getName());
+	  }
+	  driver.quit();
+	 }
 	@AfterTest
 	void teardown() throws IOException {
-
-		driver.quit();
+		 extent.flush();
 	}
 
 }

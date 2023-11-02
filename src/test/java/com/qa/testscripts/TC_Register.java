@@ -1,4 +1,5 @@
 package com.qa.testscripts;
+import java.io.IOException;
 import java.util.List;
 
 import org.openqa.selenium.WebElement;
@@ -14,11 +15,11 @@ public class TC_Register extends Testbase {
 	
 	//Generic method for registration
 	@Test(priority=1)
-	void register()
+	void register() throws IOException
 	{
 		
 		driver.findElement(AppiumBy.accessibilityId("App")).click();
-		List<WebElement> menuitems=driver.findElements(AppiumBy.className("android.widget.CheckedTextView"));
+		List<WebElement> menuitems= ecommercepageObjects.getMenuItems();
 		
 		for(WebElement item:menuitems)
 		{
@@ -28,17 +29,24 @@ public class TC_Register extends Testbase {
 				break;
 			}
 		}
-		driver.findElement(AppiumBy.id("com.studiobluelime.ecommerceapp:id/tv_register")).click();
-		driver.findElement(AppiumBy.id("com.studiobluelime.ecommerceapp:id/et_register_username")).sendKeys(username);
-		driver.findElement(AppiumBy.id("com.studiobluelime.ecommerceapp:id/et_register_mno")).sendKeys(mobile_number);
-		driver.findElement(AppiumBy.id("com.studiobluelime.ecommerceapp:id/et_register_email")).sendKeys(email);
-		driver.findElement(AppiumBy.id("com.studiobluelime.ecommerceapp:id/et_register_password")).sendKeys(password);
-		driver.findElement(AppiumBy.id("com.studiobluelime.ecommerceapp:id/btn_register")).click();
-		System.out.println("user_Registered:\n"+username+"\t mobile:"+mobile_number+"\t email:"+email+"\t password:"+password);
+		//To click on Register Button 
+		ecommercepageObjects.getRegisterButton().click();
+		//To enter user name in user name field
+		ecommercepageObjects.getUserNameTxtBox().sendKeys(username);
+		//To Enter Mobile number in mobile number field
+		ecommercepageObjects.getMobileNumber().sendKeys(mobile_number);
 		
-		driver.findElement(AppiumBy.id("com.studiobluelime.ecommerceapp:id/btn_mydetails")).click();
-		List <WebElement> userdetails = driver.findElements(AppiumBy.className("android.widget.EditText"));
+		//To Enter Email in email text field
+		ecommercepageObjects.getEmailtxtbox().sendKeys(email);
+		//To Enter Password in password text field
+		ecommercepageObjects.getRegisterPasswordTxtBox().sendKeys(password);
+		//To click on register button after entering the required fields
+		ecommercepageObjects.getBtn_register().click();
 		
+		
+		//To click on my details button to verify registered user 
+		ecommercepageObjects.getMydetalsBtn().click();
+		List <WebElement> userdetails = ecommercepageObjects.getUserDetails();
 		// to verify registered user details
 		for(WebElement userdetail:userdetails)
 		{
@@ -46,6 +54,7 @@ public class TC_Register extends Testbase {
 			if(userdetail.getText().contains(email))
 			{
 				Assert.assertTrue(true);
+				System.out.println("user_Registered:\n"+username+"\t mobile:"+mobile_number+"\t email:"+email+"\t password:"+password);
 				System.out.print("user register successfull");
 				break;
 			}
@@ -54,5 +63,7 @@ public class TC_Register extends Testbase {
 				System.out.print("\n");
 			}
 		}
-	}
+		test = extent.createTest("TC_Register");
+	
+}
 }

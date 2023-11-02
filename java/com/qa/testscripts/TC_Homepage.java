@@ -12,7 +12,7 @@ public class TC_Homepage extends Testbase {
 	@Test
 	public void scroll(String element) throws IOException {
 		 driver.findElement(AppiumBy.androidUIAutomator("new UiScrollable(new UiSelector().scrollable(true).instance(0)).scrollIntoView(new UiSelector().textContains(\"Electronics\").instance(0))")).click();
-	captureScreenShot();
+	captureScreenShot("Homepage");
 	}
 
 }

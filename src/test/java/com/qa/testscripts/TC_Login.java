@@ -1,5 +1,6 @@
 package com.qa.testscripts;
 
+import java.io.IOException;
 import java.util.List;
 
 import org.openqa.selenium.WebElement;
@@ -10,8 +11,8 @@ import io.appium.java_client.AppiumBy;
 
 public class TC_Login extends Testbase {
 	// method to verify login functionality
-	@Test
-	void login() {
+	@Test(priority=1)
+	void login() throws IOException {
 	
 		//to click on menu button
 		menubtn.click();
@@ -49,5 +50,7 @@ public class TC_Login extends Testbase {
 				System.out.print("\n");
 			}
 		}
+		 
+		 test = extent.createTest("TC_LOGIN");
 	}
 }

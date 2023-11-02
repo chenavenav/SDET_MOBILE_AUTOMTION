@@ -24,7 +24,7 @@ public class TC_Sales extends Testbase {
 			}
 		}
 		Thread.sleep(1000);
-		captureScreenShot();
+		captureScreenShot("Sales");
 	}
 
 

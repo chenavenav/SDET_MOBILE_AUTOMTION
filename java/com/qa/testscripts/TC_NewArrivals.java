@@ -26,7 +26,7 @@ public class TC_NewArrivals extends Testbase {
 			}
 		}
 		
-		captureScreenShot();
+		captureScreenShot("New Arrivals");
 	}
 
 }

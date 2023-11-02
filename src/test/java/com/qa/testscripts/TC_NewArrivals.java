@@ -15,8 +15,7 @@ public class TC_NewArrivals extends Testbase {
 	void getnewarrivals() throws IOException
 	{
 		driver.findElement(AppiumBy.accessibilityId("App")).click();
-		List<WebElement> menuitems=driver.findElements(AppiumBy.className("android.widget.CheckedTextView"));
-		
+		List<WebElement> menuitems=ecommercepageObjects.getMenuItems();
 		for(WebElement item:menuitems)
 		{
 			if(item.getText().contains("New Arrivals"))
@@ -26,7 +25,7 @@ public class TC_NewArrivals extends Testbase {
 			}
 		}
 		
-		captureScreenShot();
+		test = extent.createTest("TC_NewArrivals");
 	}
 
 }

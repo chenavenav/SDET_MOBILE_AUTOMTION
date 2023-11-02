@@ -41,5 +41,6 @@ public class TC_Login extends Testbase {
 				System.out.print("\n");
 			}
 		}
+		  test = extent.createTest("noCommerceLoginTest");
 	}
 }

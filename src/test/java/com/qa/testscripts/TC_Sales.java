@@ -12,9 +12,8 @@ public class TC_Sales extends Testbase {
 	@Test
 	void getSales() throws IOException, InterruptedException
 	{
-		driver.findElement(AppiumBy.accessibilityId("App")).click();
-		List<WebElement> menuitems=driver.findElements(AppiumBy.className("android.widget.CheckedTextView"));
-		
+		menubtn.click();
+		List<WebElement> menuitems=ecommercepageObjects.getMenuItems();
 		for(WebElement item:menuitems)
 		{
 			if(item.getText().contains("Sale"))
@@ -24,9 +23,11 @@ public class TC_Sales extends Testbase {
 			}
 		}
 		Thread.sleep(1000);
-		captureScreenShot();
+		test = extent.createTest("TC_Sales");
+		
+	}
 	}
 
 
 
-}
+

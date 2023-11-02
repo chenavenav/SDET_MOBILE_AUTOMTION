@@ -1,32 +1,257 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="8" passed="8" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-10-29T18:58:08Z" name="Suite" finished-at="2023-10-29T18:58:28Z" duration-ms="19256">
+  <suite started-at="2023-11-03T03:44:08 IST" name="Suite" finished-at="2023-11-03T03:46:45 IST" duration-ms="156223">
     <groups>
     </groups>
-    <test started-at="2023-10-29T18:58:08Z" name="Test" finished-at="2023-10-29T18:58:28Z" duration-ms="19256">
-      <class name="com.qa.testscripts.TC_Login">
-        <test-method is-config="true" signature="BaseConfig(java.lang.String)[pri:0, instance:com.qa.testscripts.TC_Login@59af0466]" started-at="2023-10-30T00:28:09Z" name="BaseConfig" finished-at="2023-10-30T00:28:21Z" duration-ms="12327" status="PASS">
+    <test started-at="2023-11-03T03:44:08 IST" name="HomePage" finished-at="2023-11-03T03:44:29 IST" duration-ms="20938">
+      <class name="com.qa.testscripts.TC_Homepage">
+        <test-method is-config="true" signature="BaseConfig(java.lang.String)[pri:0, instance:com.qa.testscripts.TC_Homepage@37313c65]" started-at="2023-11-03T03:44:08 IST" name="BaseConfig" finished-at="2023-11-03T03:44:23 IST" duration-ms="14803" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[mydevice]]>
+                <![CDATA[mydevice2]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BaseConfig -->
-        <test-method signature="login()[pri:0, instance:com.qa.testscripts.TC_Login@59af0466]" started-at="2023-10-30T00:28:21Z" name="login" finished-at="2023-10-30T00:28:27Z" duration-ms="6308" status="PASS">
+        <test-method signature="scroll()[pri:0, instance:com.qa.testscripts.TC_Homepage@37313c65]" started-at="2023-11-03T03:44:23 IST" name="scroll" finished-at="2023-11-03T03:44:28 IST" duration-ms="4691" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- scroll -->
+        <test-method is-config="true" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.qa.testscripts.TC_Homepage@37313c65]" started-at="2023-11-03T03:44:28 IST" name="getResult" finished-at="2023-11-03T03:44:29 IST" duration-ms="1404" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=scroll status=SUCCESS method=TC_Homepage.scroll()[pri:0, instance:com.qa.testscripts.TC_Homepage@37313c65] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+      </class> <!-- com.qa.testscripts.TC_Homepage -->
+    </test> <!-- HomePage -->
+    <test started-at="2023-11-03T03:44:29 IST" name="TC_Register" finished-at="2023-11-03T03:44:50 IST" duration-ms="20994">
+      <class name="com.qa.testscripts.TC_Register">
+        <test-method is-config="true" signature="BaseConfig(java.lang.String)[pri:0, instance:com.qa.testscripts.TC_Register@e3b3b2f]" started-at="2023-11-03T03:44:29 IST" name="BaseConfig" finished-at="2023-11-03T03:44:41 IST" duration-ms="11231" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[mydevice1]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BaseConfig -->
+        <test-method signature="register()[pri:1, instance:com.qa.testscripts.TC_Register@e3b3b2f]" started-at="2023-11-03T03:44:41 IST" name="register" finished-at="2023-11-03T03:44:50 IST" duration-ms="8962" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- register -->
+        <test-method is-config="true" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.qa.testscripts.TC_Register@e3b3b2f]" started-at="2023-11-03T03:44:50 IST" name="getResult" finished-at="2023-11-03T03:44:50 IST" duration-ms="794" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=register status=SUCCESS method=TC_Register.register()[pri:1, instance:com.qa.testscripts.TC_Register@e3b3b2f] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+      </class> <!-- com.qa.testscripts.TC_Register -->
+    </test> <!-- TC_Register -->
+    <test started-at="2023-11-03T03:44:50 IST" name="TC_Login" finished-at="2023-11-03T03:45:07 IST" duration-ms="17127">
+      <class name="com.qa.testscripts.TC_Login">
+        <test-method is-config="true" signature="BaseConfig(java.lang.String)[pri:0, instance:com.qa.testscripts.TC_Login@28194a50]" started-at="2023-11-03T03:44:50 IST" name="BaseConfig" finished-at="2023-11-03T03:45:01 IST" duration-ms="10631" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[mydevice1]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BaseConfig -->
+        <test-method signature="login()[pri:1, instance:com.qa.testscripts.TC_Login@28194a50]" started-at="2023-11-03T03:45:01 IST" name="login" finished-at="2023-11-03T03:45:07 IST" duration-ms="5647" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.qa.testscripts.TC_Login@59af0466]" started-at="2023-10-30T00:28:27Z" name="teardown" finished-at="2023-10-30T00:28:28Z" duration-ms="602" status="PASS">
+        <test-method is-config="true" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.qa.testscripts.TC_Login@28194a50]" started-at="2023-11-03T03:45:07 IST" name="getResult" finished-at="2023-11-03T03:45:07 IST" duration-ms="844" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=login status=SUCCESS method=TC_Login.login()[pri:1, instance:com.qa.testscripts.TC_Login@28194a50] output={null}]]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- teardown -->
+        </test-method> <!-- getResult -->
       </class> <!-- com.qa.testscripts.TC_Login -->
-    </test> <!-- Test -->
+    </test> <!-- TC_Login -->
+    <test started-at="2023-11-03T03:45:07 IST" name="TC_MyAccount" finished-at="2023-11-03T03:45:26 IST" duration-ms="18657">
+      <class name="com.qa.testscripts.TC_MyAccount">
+        <test-method is-config="true" signature="BaseConfig(java.lang.String)[pri:0, instance:com.qa.testscripts.TC_MyAccount@2ad48653]" started-at="2023-11-03T03:45:07 IST" name="BaseConfig" finished-at="2023-11-03T03:45:18 IST" duration-ms="10942" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[mydevice2]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BaseConfig -->
+        <test-method signature="getmyaccount()[pri:0, instance:com.qa.testscripts.TC_MyAccount@2ad48653]" started-at="2023-11-03T03:45:18 IST" name="getmyaccount" finished-at="2023-11-03T03:45:25 IST" duration-ms="7023" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getmyaccount -->
+        <test-method is-config="true" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.qa.testscripts.TC_MyAccount@2ad48653]" started-at="2023-11-03T03:45:25 IST" name="getResult" finished-at="2023-11-03T03:45:26 IST" duration-ms="687" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=getmyaccount status=SUCCESS method=TC_MyAccount.getmyaccount()[pri:0, instance:com.qa.testscripts.TC_MyAccount@2ad48653] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+      </class> <!-- com.qa.testscripts.TC_MyAccount -->
+    </test> <!-- TC_MyAccount -->
+    <test started-at="2023-11-03T03:45:26 IST" name="Menu_Items" finished-at="2023-11-03T03:45:39 IST" duration-ms="12923">
+      <class name="com.qa.testscripts.TC_MenuItems">
+        <test-method is-config="true" signature="BaseConfig(java.lang.String)[pri:0, instance:com.qa.testscripts.TC_MenuItems@61710c6]" started-at="2023-11-03T03:45:26 IST" name="BaseConfig" finished-at="2023-11-03T03:45:37 IST" duration-ms="10559" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[mydevice2]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BaseConfig -->
+        <test-method signature="getMenuitems()[pri:0, instance:com.qa.testscripts.TC_MenuItems@61710c6]" started-at="2023-11-03T03:45:37 IST" name="getMenuitems" finished-at="2023-11-03T03:45:38 IST" duration-ms="1468" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getMenuitems -->
+        <test-method is-config="true" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.qa.testscripts.TC_MenuItems@61710c6]" started-at="2023-11-03T03:45:38 IST" name="getResult" finished-at="2023-11-03T03:45:39 IST" duration-ms="894" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=getMenuitems status=SUCCESS method=TC_MenuItems.getMenuitems()[pri:0, instance:com.qa.testscripts.TC_MenuItems@61710c6] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+      </class> <!-- com.qa.testscripts.TC_MenuItems -->
+    </test> <!-- Menu_Items -->
+    <test started-at="2023-11-03T03:45:39 IST" name="ADD_TO_Cart" finished-at="2023-11-03T03:46:16 IST" duration-ms="36599">
+      <class name="com.qa.testscripts.TC_AddtoCart">
+        <test-method is-config="true" signature="BaseConfig(java.lang.String)[pri:0, instance:com.qa.testscripts.TC_AddtoCart@7d7758be]" started-at="2023-11-03T03:45:39 IST" name="BaseConfig" finished-at="2023-11-03T03:45:50 IST" duration-ms="11129" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[mydevice2]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BaseConfig -->
+        <test-method signature="additemtocart()[pri:0, instance:com.qa.testscripts.TC_AddtoCart@7d7758be]" started-at="2023-11-03T03:45:50 IST" name="additemtocart" finished-at="2023-11-03T03:46:15 IST" duration-ms="24548" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- additemtocart -->
+        <test-method is-config="true" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.qa.testscripts.TC_AddtoCart@7d7758be]" started-at="2023-11-03T03:46:15 IST" name="getResult" finished-at="2023-11-03T03:46:16 IST" duration-ms="919" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=additemtocart status=SUCCESS method=TC_AddtoCart.additemtocart()[pri:0, instance:com.qa.testscripts.TC_AddtoCart@7d7758be] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+      </class> <!-- com.qa.testscripts.TC_AddtoCart -->
+    </test> <!-- ADD_TO_Cart -->
+    <test started-at="2023-11-03T03:46:16 IST" name="TC_Sales" finished-at="2023-11-03T03:46:30 IST" duration-ms="14544">
+      <class name="com.qa.testscripts.TC_Sales">
+        <test-method is-config="true" signature="BaseConfig(java.lang.String)[pri:0, instance:com.qa.testscripts.TC_Sales@68878f6d]" started-at="2023-11-03T03:46:16 IST" name="BaseConfig" finished-at="2023-11-03T03:46:27 IST" duration-ms="11179" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[mydevice1]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BaseConfig -->
+        <test-method signature="getSales()[pri:0, instance:com.qa.testscripts.TC_Sales@68878f6d]" started-at="2023-11-03T03:46:27 IST" name="getSales" finished-at="2023-11-03T03:46:29 IST" duration-ms="2289" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getSales -->
+        <test-method is-config="true" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.qa.testscripts.TC_Sales@68878f6d]" started-at="2023-11-03T03:46:29 IST" name="getResult" finished-at="2023-11-03T03:46:30 IST" duration-ms="1072" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=getSales status=SUCCESS method=TC_Sales.getSales()[pri:0, instance:com.qa.testscripts.TC_Sales@68878f6d] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+      </class> <!-- com.qa.testscripts.TC_Sales -->
+    </test> <!-- TC_Sales -->
+    <test started-at="2023-11-03T03:46:30 IST" name="TC_NewArrivals" finished-at="2023-11-03T03:46:45 IST" duration-ms="14327">
+      <class name="com.qa.testscripts.TC_NewArrivals">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.qa.testscripts.TC_NewArrivals@7fd7a283]" started-at="2023-11-03T03:44:08 IST" name="setUp" finished-at="2023-11-03T03:44:08 IST" duration-ms="162" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="BaseConfig(java.lang.String)[pri:0, instance:com.qa.testscripts.TC_NewArrivals@7fd7a283]" started-at="2023-11-03T03:46:30 IST" name="BaseConfig" finished-at="2023-11-03T03:46:41 IST" duration-ms="11114" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[mydevice1]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BaseConfig -->
+        <test-method signature="getnewarrivals()[pri:0, instance:com.qa.testscripts.TC_NewArrivals@7fd7a283]" started-at="2023-11-03T03:46:41 IST" name="getnewarrivals" finished-at="2023-11-03T03:46:43 IST" duration-ms="1260" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getnewarrivals -->
+        <test-method is-config="true" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.qa.testscripts.TC_NewArrivals@7fd7a283]" started-at="2023-11-03T03:46:43 IST" name="getResult" finished-at="2023-11-03T03:46:45 IST" duration-ms="1951" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=getnewarrivals status=SUCCESS method=TC_NewArrivals.getnewarrivals()[pri:0, instance:com.qa.testscripts.TC_NewArrivals@7fd7a283] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method is-config="true" signature="endReport()[pri:0, instance:com.qa.testscripts.TC_NewArrivals@7fd7a283]" started-at="2023-11-03T03:46:45 IST" name="endReport" finished-at="2023-11-03T03:46:53 IST" duration-ms="8021" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endReport -->
+      </class> <!-- com.qa.testscripts.TC_NewArrivals -->
+    </test> <!-- TC_NewArrivals -->
   </suite> <!-- Suite -->
 </testng-results>
